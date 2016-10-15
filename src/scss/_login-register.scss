@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  display: table
+}
+
+.login-container {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: white !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-form-text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.card-login {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.card-header{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+.card-action{
+  padding: 5px !important;
+  text-transform: none !important;
+}
+.medium-small{
+  font-size: 0.7rem;
+}
+
+.margin {
+  margin: 0 !important;
+}

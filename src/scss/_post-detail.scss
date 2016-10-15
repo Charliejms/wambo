@@ -1,0 +1,152 @@
+@import "variables";
+
+.post-panel {
+  transition: box-shadow .25s;
+  padding: $post-padding;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  border-radius: 2px;
+  @extend .z-depth-1;
+  background-color: $post-bg-color;
+}
+
+.post {
+  position: relative;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  background-color: $post-bg-color;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  @extend .z-depth-1;
+
+
+  .post-title {
+    font-size: 24px;
+    font-weight: 400;
+    &.activator {
+      cursor: pointer;
+    }
+  }
+  .post-subtitle{
+    font-size: 20px;
+    font-weight: 300;
+    &.activator {
+      cursor: pointer;
+    }
+  }
+  .post-h3{
+    font-size: 18px;
+    font-weight: 200;
+    &.activator {
+      cursor: pointer;
+    }
+  }
+
+  // Post Sizes
+  &.small, &.medium, &.large {
+    position: relative;
+
+    .post-image {
+      max-height: 60%;
+      overflow: hidden;
+    }
+    .post-content {
+      max-height: 40%;
+      overflow: hidden;
+    }
+    .post-action {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.small {
+    height: 300px;
+  }
+
+  &.medium {
+    height: 400px;
+  }
+
+  &.large {
+    height: 500px;
+  }
+
+
+  .post-image {
+    position: relative;
+
+    // Image background for content
+    img {
+      display: block;
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .post-title {
+      color: $post-bg-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: $post-padding;
+    }
+
+  }
+
+  .post-content {
+    padding: $post-padding;
+    border-radius: 0 0 2px 2px;
+
+    p {
+      margin: 0;
+      color: inherit;
+    }
+    .post-title {
+      line-height: 25px;
+    }
+  }
+
+  .post-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,.2);
+    padding: $post-padding;
+    z-index: 2;
+
+    a:not(.btn):not(.btn-large):not(.btn-floating) {
+      color: $post-link-color;
+      margin-right: $post-padding;
+      transition: color .3s ease;
+      text-transform: uppercase;
+
+      &:hover { color: $post-link-color-light; }
+    }
+
+    & + .post-reveal {
+      z-index: 1;
+      padding-bottom: 64px;
+    }
+  }
+
+  .post-reveal {
+    padding: $post-padding;
+    position: absolute;
+    background-color: $post-bg-color;
+    width: 100%;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+
+    .post-title {
+      cursor: pointer;
+      display: block;
+    }
+  }
+}

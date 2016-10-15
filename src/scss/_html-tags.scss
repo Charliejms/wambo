@@ -1,0 +1,74 @@
+
+body{
+  background: $body-background-color;
+  color: $main-text-color;
+  font-family: $main-font-family;
+  font-size:$font-size-base;
+  padding-top: 70px;
+}
+
+//imagenes, videos y objetos resposive
+img, embed, object, video{
+  max-width: 100%;
+}
+
+
+//Form
+
+// Forms
+form {
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $color-write;
+  position: absolute;
+  width: calc(100% - 20px);
+  top: 0px;
+  @include if-is-table {
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .form-row {
+      width: calc(50% - 10px);
+      margin: auto 5px;
+    }
+    button {
+      width: 20%
+    }
+  }
+}
+
+label, input, button{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+label{
+  font-size: $font-size-small;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input{
+  border: 1px solid $color-sirena;
+  margin: 5px 0px 5px 0px;
+  padding: 10px;
+  font-size: $font-size-base;
+  border-radius: 5px;
+}
+
+button{
+  @extend  input;
+  background-color: $color-sirena;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: darken($color-sirena,50%);
+  transition: all 0.25s;
+  &:active{
+    background: darken($color-sirena,50%);
+    color: $color-write;
+  }
+}

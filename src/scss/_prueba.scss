@@ -1,0 +1,200 @@
+@keyframes close{
+  0% { transform: scale(1, 1); }
+  100% { transform: scale(0, 0);}
+}
+
+@keyframes open{
+  0% { transform: scale(0, 0); }
+  100% { transform: scale(1, 1);}
+}
+
+.overlay{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #333;
+  transform: scale(0, 0);
+  color: #fff;
+}
+
+.animate {
+  animation: close 0.5s forwards;
+}
+
+.open {
+  animation: open 0.5s forwards;
+}
+
+.overlay ul{
+  display: flex;
+  align-content:flex-end;
+  flex-direction: column;
+  min-height: 100vh;
+  list-style-type: none;
+  font-family: open sans;
+  text-align: center;
+}
+
+.overlay ul li{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.overlay ul li:first-child{
+  font-family: roboto;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+.overlay ul li:hover{
+  cursor: pointer;
+  background-color: #000;
+}
+
+.overlay ul li:first-child:hover{
+  background-color: #333;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.header .logo{
+  flex-basis: 300px;
+  padding: 20px;
+  font-family: open sans;
+}
+
+.menu{
+  flex-basis: 1000px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.menu li{
+  font-family: open sans;
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  padding: 20px;
+}
+
+.menu li:hover{
+  background-color: #f1f1f1;
+}
+
+.main{
+  font-family: open sans;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+.main>div{
+  background-color: #fff;
+}
+
+.posts{
+  padding: 30px;
+  max-width: 1000px;
+}
+
+.sidebar{
+  min-width: 300px;
+}
+
+.sidebar div{
+  padding: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.sidebar ul{
+  list-style-type: none;
+}
+
+.sidebar ul li{
+  padding: 20px;
+  transition: all 0.5s;
+}
+.sidebar ul li:hover{
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.footer{
+  font-family: open sans;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #d1d1d1;
+}
+
+.title{
+  font-family: roboto !important;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.meta{
+  font-size: 15px;
+  color: #333;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+
+.content{
+  line-height: 30px;
+}
+
+@media (max-width: 1000px){
+  body{
+
+  }
+  .main{
+    flex-direction: column;
+  }
+
+  .posts{
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 600px){
+  .menu{
+    display: none;
+  }
+
+  .logo{
+    text-align: center;
+  }
+
+  .menu-icon{
+    display: block;
+    cursor: pointer;
+  }
+}

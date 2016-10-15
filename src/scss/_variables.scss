@@ -1,0 +1,44 @@
+//Font Family
+$main-font-family:'Open Sans', sans-serif;
+$title-font-family: $main-font-family;
+$body-font-family: $main-font-family;
+
+//Font zize
+
+$font-size-base: 14px;
+$font-size-small: $font-size-base -6px;
+$font-size-large: $font-size-base +6px;
+
+$font-size-h1: $font-size-base 15px;
+$font-size-h2: $font-size-base 12px;
+$font-size-h3: $font-size-base 9px;
+$font-size-h4: $font-size-base 6px;
+$font-size-h5: $font-size-base 3px;
+$font-size-h6: $font-size-base;
+
+
+
+//Responsive variables
+
+$table-width: 737px;
+$phone-width: $table-width - 1px;
+$desktop-width: 1200px !default;
+
+
+/* 4. Post Details
+   ========================================================================== */
+$post-title : 24px;
+$post-subtitle: 20px;
+$post-text-size-h3: 18px;
+$post-text-size-h4: 16px;
+$post-padding: 5px !default;
+$post-bg-color: #fff !default;
+$post-link-color: color("orange", "accent-2") !default;
+$post-link-color-light: lighten($post-link-color, 20%) !default;
+/* 12. Grid
+   ========================================================================== */
+
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
