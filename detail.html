@@ -4,81 +4,173 @@
     <meta charset="UTF-8">
     <title>Detalle articulo</title>
     <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<nav class="header">
-    <div class="overlay">
-        <ul>
-            <li>Portada</li>
-            <li>Tecnología</li>
-            <li>Cultura</li>
-            <li>Deportes</li>
-        </ul>
-    </div>
 
-    <div class="logo">
-        <img class="menu-icon" src="dist/img/menu.png" alt="Menu">
-        WAMBO
-    </div>
-    <ul class="menu">
-
-        <li class="">
-            <a href="#">Portada</a>
-        </li>
-        <li class="">
-            <a href="">Tecnología</a>
-        </li>
-        <li class="">
-            <a href="#">Cultura</a>
-        </li>
-        <li class="">
-            <a href="#">Deportes</a>
-        </li>
-        <li class="">
-            <a href="#">Sobre mi</a>
-        </li>
-    </ul>
-</nav>
-<div class = "main">
-
-    <div class = "recent-post">
-        <div>
-            RECENT POSTS
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Wambo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
         </div>
-        <ul>
-            <li>Animations and Transitions using CSS3</li>
-            <li>CSS Flexbox is the most powerful layout tool !</li>
-            <li>Taking a look at 2D and 3D Transforms</li>
-            <li>Getting Started with CSS3</li>
+    </nav>
+    <div class="navbar-fixed">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#test1">TV shows</a></li>
+                <li class="tab col s3"><a href="#test2">Movies</a></li>
+                <li class="tab col s3"><a href="#test3">People</a></li>
+                <li class="tab col s3"><a href="#test4">Discover</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <section class="section">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <ul class="collection">
+                    <li class="collection-item avatar">
+                        <i class="mdi-file-folder circle light-blue">@</i>
+                        <span class="collection-header"> @Mr.X </span>
+                        <p>Published: <time pubdate datetime="2009-10-09">9th October, 2009</time></p>
+                        <a href="#" class="">TV shows<i class="mdi-action-grade"></i></a>
+                        <i class="secondary-content">Fav</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <article class="post">
+            <header>
+                <div class="post-content">
+                    <h1 class="post-title">A Mr. Robot Reading List</h1>
+                </div>
+                <div class="post-image">
+                    <img src="dist/img/mrrobot-post_mini.png" alt="blog-img">
+                </div>
+                <div class="post-content">
+                    <h2 class="post-subtitle">I miss Mr. Robot. It won’t be back on TV until June</h2>
+                </div>
+            </header>
+            <div class="divider"></div>
+            <div class="post-content">
+                <h3 class="post-h3">Player Piano</h3>
+                <p>
+                    In a future where automation replaces human labor, the managers and the engineers live big while those whose jobs are replaced live in squalor. Instead of building a future for all, the elites built a future for themselves. Manager Paul meets secret society intent on ripping apart a system producing nothing but disparity.
+                </p>
+                <h3 class="post-h3">Moral Blindness</h3>
+                <p>
+                    Makes the case that evil isn’t usually a bad man intent on doing bad things, but rather our system’s train never stopping to question where it’s going. Bauman is not an easy dude to read. His mind palace is a messy chaos of books most people will never read. But the idea of moral blindness is useful and I think it’s a key theme in Mr. Robot.
+                </p>
+                <h3 class="post-h3">Saving the Modern Soul</h3>
+                <p>
+                    There’s a reason the disenchanted like me don’t bother with therapy anymore and this scene is why.
+                </p>
+            </div>
+        </article>
+        <ul class="post-action">
+            <li class="right">
+                <a class="btn-floating waves-effect waves-light green accent-4"><i></i></a>
+            </li>
+            <li class="left">
+                <a class="btn-floating waves-effect waves-light light-blue"><i></i></a>
+            </li>
         </ul>
-    </div>
+    </section>
+    <div class="divider"></div>
+    <section class="comments-container">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h4>Comments</h4>
+                </div>
+                <div class="col s12">
+                    <div id="comments" class="comments-list-wrapper">
+                        <div class="loader">
+                            <span class="fa fa-circle-o-notch fa-spin fa-3x"></span>
+                        </div>
+                        <div class="empty">
+                            No comments here. Be first!
+                        </div>
+                        <div class="error">
+                            Oooops! Something went wrong. Try again later.
+                        </div>
+                        <div class="comments-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class = "posts">
-        <p class = "title">CSS Flexbox is the most powerful Layout Tool !</p>
-        <br>
-        <p class = "meta">POSTED BY ADMIN</p>
-        <br>
-        <p class = "content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula dui libero, non hendrerit sem vehicula nec. Donec quis viverra felis, quis imperdiet nunc. Nunc nec accumsan nunc, non tempus massa. Nullam viverra varius felis, eget venenatis massa ultrices eget. Ut a fringilla metus. Pellentesque hendrerit neque enim. Aliquam at leo nulla. Nunc quis odio suscipit, sollicitudin nisl sed, finibus quam. Vestibulum auctor, sapien eu faucibus aliquam, ex sem sollicitudin tellus, sit amet aliquam odio magna a nulla.
-
-            Vestibulum tristique diam id volutpat tincidunt. Integer fermentum enim enim, in tincidunt nunc condimentum nec. Nullam id nisl in mi sollicitudin vulputate id non neque. Pellentesque facilisis maximus risus nec ullamcorper. Duis enim lectus, vehicula non felis ac, ultrices maximus neque. Donec et justo porta, aliquet nibh tempus, porta tortor. Maecenas eget ullamcorper libero.
-
-            Duis eleifend, orci in lobortis ultricies, nisi tortor tempor orci, in sagittis lorem dui a lorem. Pellentesque in pretium massa. Proin eget eros quis mi accumsan tristique at nec lorem. Cras dignissim blandit laoreet. Donec eget posuere erat. Morbi ut pellentesque lacus. Nam quis nunc ac neque sagittis pretium. Duis mattis, eros vel tincidunt lobortis, ante eros fringilla tellus, ut aliquam lorem justo vitae ipsum. Aenean accumsan ex eu nulla commodo, ut sollicitudin massa vulputate. Proin quis risus quam. Pellentesque sagittis condimentum justo, id porta nulla interdum vel.
-
-            Integer rutrum egestas orci sit amet pharetra. Nulla ut erat vitae sapien volutpat sollicitudin eu sed nulla. Vestibulum posuere hendrerit dolor, in vulputate tellus volutpat scelerisque. Praesent sollicitudin commodo risus, nec rutrum diam tincidunt semper. Aenean quis risus metus. Curabitur nec convallis libero. Cras velit neque, mollis nec blandit interdum, condimentum eget diam. Vivamus nec sapien eget tortor volutpat aliquam. Suspendisse tellus risus, molestie sed velit mollis, placerat euismod mi. Vivamus vitae elit sed est vulputate semper. Morbi accumsan, urna id scelerisque ullamcorper, lectus nunc hendrerit lacus, ac vehicula risus massa eget eros.
-
-            Nullam placerat arcu quis ante aliquet sollicitudin. Mauris vitae tempor magna. Curabitur varius ante ex. Morbi ac lectus lectus. Sed molestie libero arcu. Aliquam leo ipsum, tristique ultrices nibh eget, tempor dapibus risus. Nulla maximus viverra fringilla. Pellentesque rhoncus eros ut ultricies ultricies. Integer turpis ipsum, porttitor in felis non, ornare posuere ipsum. Pellentesque congue eget nisi at dictum. Pellentesque quis sapien et elit feugiat ornare. Nullam convallis turpis ex, at dictum nibh maximus molestie. Nam aliquam congue feugiat. Duis posuere, leo sit amet convallis lobortis, est nunc pharetra orci, non iaculis velit nisi ut erat.<br><br>
-            <iframe width="100%" height="300" src="" frameborder="0" allowfullscreen></iframe><br><br>
-        </p>
-    </div>
-
+    <section class="comments-form">
+        <div id="input-character-counter" class="section">
+            <h4 class="header">Add Comment</h4>
+            <div class="row">
+                <div class="col s12 m4 l3">
+                    <p>Add your comment.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12 m6 l6">
+                                    <input id="name" type="text" length="20">
+                                    <label for="name" class="active">Name</label>
+                                </div>
+                                <div class="input-field col s12 m6 l6">
+                                    <input id="last-name" type="text" length="20">
+                                    <label for="last-name" class="active">Last name</label>
+                                </div>
+                                <div class="input-field col s12 m6 l6">
+                                    <input id="email" type="email" value="email">
+                                    <label for="email" class="active">name@mail.com</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea-comment" class="materialize-textarea" length="120"></textarea>
+                                    <label for="textarea-comment" class="active">Textarea</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button class=" red accent-2 btn waves-effect waves-light col s12" type="submit" name="action">Comment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
+
 <footer class="page-footer">
     <div class="container">
-        &copy; 2016 | Richard Cacuango.
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Wambo Company</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © <a class="brown-text text-lighten-3" href="http://materializecss.com">Richard Cacuango</a>
+        </div>
     </div>
 </footer>
-
-
+<script src="dist/js/app.js"></script>
 </body>
 </html>

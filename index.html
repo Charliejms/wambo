@@ -5,94 +5,152 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title> Wambo</title>
 </head>
-<body class="form-shown">
-<header class="web-header">
-
-        <img class="add-icon" src="dist/img/menu.png" alt="seach">
-        <img class="add-menu" src="dist/img/menu.png" alt="menu">
-        <h1 class="web-title"> WAMBO</h1>
-        <ul class="navbar-list">
-            <li class="navbar-item"><a href="#">Portada</a></li>
-            <li class="navbar-item"><a href="#">Actualidad</a></li>
-            <li class="navbar-item"><a href="#">Técnologia</a></li>
-            <li class="navbar-item"><a href="#">Series</a></li>
-            <li class="navbar-item"><a href="#">Blogs</a></li>
-        </ul>
-
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Wambo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="navbar-fixed">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#test1">TV shows</a></li>
+                <li class="tab col s3"><a href="#test2">Movies</a></li>
+                <li class="tab col s3"><a href="#test3">People</a></li>
+                <li class="tab col s3"><a href="#test4">Discover</a></li>
+            </ul>
+        </div>
+    </div>
 </header>
-<form class="ui-element new-song-form">
-    <div class="form-row">
-        <label for="artist">Artista</label>
-        <input type="text" name="artist" id="artist" placeholder="Artista" required>
-    </div>
-    <div class="form-row">
-        <label for="title">Titulo</label>
-        <input type="text" name="title" id="title" placeholder="Titulo" required>
-    </div>
-    <div class="form-row">
-        <label for="audio_url">Audio URL</label>
-        <input type="url" name="audio_url" id="audio_url" placeholder="http://...." required>
-    </div>
-    <div class="form-row">
-        <label for="cover_url">Cover</label>
-        <input type="url" name="cover_url" id="cover_url" placeholder="http://....">
-    </div>
-    <button> Save Song</button>
-</form>
-<section class="ui-element song-list">
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo</div>
+
+<section class="post-list">
+    <article class="">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="blog-card">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <a href="detail.html">
+                                    <img src="dist/img/mrrobot-post_mini.png" alt="blog-img">
+                                </a>
+                            </div>
+                            <ul class="card-action-buttons">
+                                <li>
+                                    <a class="btn-floating waves-effect waves-light green accent-2">
+                                        <i class="small material-icons">star</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating waves-effect waves-light light-blue">
+                                        <i class="small material-icons">comment</i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card-content">
+                                <p class="row">
+                                    <span class="left">
+                                        <a href="#">TV Show</a>
+                                    </span>
+                                    <span class="right">18th June, 2015</span>
+                                </p>
+                                <h2 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">I miss Mr. Robot. It won’t be back on TV until June</a>
+                                </h2>
+                                <div class="row">
+                                    <div class="col s2">
+                                        <img src="dist/img/avatar/user.png" alt="" class="circle responsive-img valign profile-image">
+                                    </div>
+                                    <div class="col s9"> By <a href="#">@Mr X</a></div>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> Apple MacBook Pro A1278 13"</span>
+                                <p>Here is some more information about this blog that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
+
+    <article class="">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="blog-card">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <a href="detail.html">
+                                    <img src="dist/img/mrrobot-post_mini.png" alt="blog-img">
+                                </a>
+                            </div>
+                            <ul class="card-action-buttons">
+                                <li>
+                                    <a class="btn-floating waves-effect waves-light green accent-2">
+                                        <i class="small material-icons">star</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating waves-effect waves-light light-blue">
+                                        <i class="small material-icons">comment</i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card-content">
+                                <p class="row">
+                                    <span class="left"><a href="#">TV Show</a></span>
+                                    <span class="right">18th June, 2015</span>
+                                </p>
+                                <h2 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">Materialize Featured Blog Post Card</a>
+                                </h2>
+                                <div class="row">
+                                    <div class="col s2">
+                                        <img src="dist/img/avatar/user.png" alt="" class="circle responsive-img valign profile-image">
+                                    </div>
+                                    <div class="col s9"> By <a href="#">John Doe</a></div>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> Apple MacBook Pro A1278 13"</span>
+                                <p>Here is some more information about this blog that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo </div>
-    </article>
-    <article class="song">
-        <img  class="cover" src="http://music-plaza.yolasite.com/resources/1380626424_CD-Music.png" alt="">
-        <div class="artist"> Artista</div>
-        <div class="title"> Titulo 66 </div>
-    </article>
+
 </section>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Wambo Company</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © <a class="brown-text text-lighten-3" href="http://materializecss.com">Richard Cacuango</a>
+        </div>
+    </div>
+</footer>
 </body>
 <script src="dist/js/app.js"></script>
 </html>

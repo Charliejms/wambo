@@ -49,15 +49,77 @@
                     There’s a reason the disenchanted like me don’t bother with therapy anymore and this scene is why.
                 </p>
             </div>
-            <footer class="post-action">
-                <ul class="card-action-buttons">
-                    <li><a class="btn-floating waves-effect waves-light green accent-4"><i class="mdi-social-share"></i></a>
-                    </li>
-                    <li><a class="btn-floating waves-effect waves-light light-blue"><i class="mdi-action-info activator"></i></a>
-                    </li>
-                </ul>
-            </footer>
         </article>
+        <ul class="post-action">
+            <li class="right">
+                <a class="btn-floating waves-effect waves-light green accent-4"><i></i></a>
+            </li>
+            <li class="left">
+                <a class="btn-floating waves-effect waves-light light-blue"><i></i></a>
+            </li>
+        </ul>
+    </section>
+    <div class="divider"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h4>Comments</h4>
+                </div>
+                <div class="col s12">
+                    <div id="comments" class="comments-list-wrapper">
+                        <div class="loader">
+                            <span class="fa fa-circle-o-notch fa-spin fa-3x"></span>
+                        </div>
+                        <div class="empty">
+                            No comments here. Be first!
+                        </div>
+                        <div class="error">
+                            Oooops! Something went wrong. Try again later.
+                        </div>
+                        <div class="comments-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section class="comments-container">
+
+    </section>
+
+    <section class="comments-form">
+        <div id="input-character-counter" class="section">
+            <h4 class="header">Add Comment</h4>
+            <div class="row">
+                <div class="col s12 m4 l3">
+                    <p>Add your comment.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12 m6 l6">
+                                    <input id="name" type="text" length="20">
+                                    <label for="name" class="active">Name</label>
+                                </div>
+                                <div class="input-field col s12 m6 l6">
+                                    <input id="last-name" type="text" length="20">
+                                    <label for="last-name" class="active">Last name</label>
+                                </div>
+                                <div class="input-field col s12 m6 l6">
+                                    <input id="email" type="email" value="email">
+                                    <label for="email" class="active">name@mail.com</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea-comment" class="materialize-textarea" length="120"></textarea>
+                                    <label for="textarea-comment" class="active">Textarea</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 <script src="../dist/js/app.js"></script>
