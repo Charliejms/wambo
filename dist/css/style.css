@@ -6196,6 +6196,11 @@ html, body {
       cursor: pointer;
       display: block; }
 
+.character-counter {
+  font-size: 12px;
+  height: 1px;
+  float: right; }
+
 .blog-card ul.card-action-buttons {
   margin: -26px 10px 0px 0px;
   text-align: right; }

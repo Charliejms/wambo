@@ -5,5 +5,6 @@
 require("./picker")
 require("./materialize")
 require("./nav")
+require("./form-comment")
 
 

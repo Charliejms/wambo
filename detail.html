@@ -122,25 +122,25 @@
                 </div>
                 <div class="col s12 m8 l9">
                     <div class="row">
-                        <form class="col s12">
+                        <form class="new-comment-form col s12" novalidate>
                             <div class="row">
                                 <div class="input-field col s12 m6 l6">
-                                    <input id="name" type="text" length="20">
+                                    <input id="name" name="name" type="text" length="20" required>
                                     <label for="name" class="active">Name</label>
                                 </div>
                                 <div class="input-field col s12 m6 l6">
-                                    <input id="last-name" type="text" length="20">
-                                    <label for="last-name" class="active">Last name</label>
+                                    <input id="last_name" name="last_name" type="text" length="20" required>
+                                    <label for="last_name" class="active">Last name</label>
                                 </div>
                                 <div class="input-field col s12 m6 l6">
-                                    <input id="email" type="email" value="email">
+                                    <input id="email" name="email" type="email" required>
                                     <label for="email" class="active">name@mail.com</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="textarea-comment" class="materialize-textarea" length="120"></textarea>
-                                    <label for="textarea-comment" class="active">Textarea</label>
+                                    <textarea id="textarea_comment" name="textarea-comment" class="materialize-textarea" length="120" required></textarea>
+                                    <label for="textarea_comment" class="active">Leave a comment</label>
                                 </div>
                             </div>
                             <div class="row">
