@@ -21,11 +21,13 @@
   .post-title {
     font-size: 24px;
     font-weight: 400;
+    padding: $post-padding-title ;
     &.activator {
       cursor: pointer;
     }
   }
-  .post-subtitle{
+  .post-intro{
+    padding: $post-padding-intro;
     font-size: 20px;
     font-weight: 300;
     &.activator {

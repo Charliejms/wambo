@@ -2399,7 +2399,7 @@ td, th {
 
 .collection {
   margin: 0.5rem 0 1rem 0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid white;
   border-radius: 2px;
   overflow: hidden;
   position: relative; }
@@ -2408,7 +2408,7 @@ td, th {
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
-    border-bottom: 1px solid #e0e0e0; }
+    border-bottom: 1px solid white; }
     .collection .collection-item.avatar {
       min-height: 84px;
       padding-left: 72px;
@@ -2450,7 +2450,7 @@ td, th {
       background-color: #ddd; }
   .collection.with-header .collection-header {
     background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid white;
     padding: 10px 20px; }
   .collection.with-header .collection-item {
     padding-left: 30px; }
@@ -6096,7 +6096,7 @@ html, body {
    ========================================================================== */
 .post-panel {
   transition: box-shadow .25s;
-  padding: 5px;
+  padding: 0 10px 25px 10px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
   background-color: #fff; }
@@ -6109,13 +6109,15 @@ html, body {
   border-radius: 2px; }
   .post .post-title {
     font-size: 24px;
-    font-weight: 400; }
+    font-weight: 400;
+    padding: 20px 10px 5px 10px; }
     .post .post-title.activator {
       cursor: pointer; }
-  .post .post-subtitle {
+  .post .post-intro {
+    padding: 5px 10px 5px 10px;
     font-size: 20px;
     font-weight: 300; }
-    .post .post-subtitle.activator {
+    .post .post-intro.activator {
       cursor: pointer; }
   .post .post-h3 {
     font-size: 18px;
@@ -6157,9 +6159,9 @@ html, body {
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: 5px; }
+      padding: 0 10px 25px 10px; }
   .post .post-content {
-    padding: 5px;
+    padding: 0 10px 25px 10px;
     border-radius: 0 0 2px 2px; }
     .post .post-content p {
       margin: 0;
@@ -6170,11 +6172,11 @@ html, body {
     position: relative;
     background-color: inherit;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
-    padding: 5px;
+    padding: 0 10px 25px 10px;
     z-index: 2; }
     .post .post-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
       color: #ffab40;
-      margin-right: 5px;
+      margin-right: 0 10px 25px 10px;
       transition: color .3s ease;
       text-transform: uppercase; }
       .post .post-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
@@ -6183,7 +6185,7 @@ html, body {
       z-index: 1;
       padding-bottom: 64px; }
   .post .post-reveal {
-    padding: 5px;
+    padding: 0 10px 25px 10px;
     position: absolute;
     background-color: #fff;
     width: 100%;
