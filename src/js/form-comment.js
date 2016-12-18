@@ -5,16 +5,43 @@
 var $ = require('jquery');
 var moment = require('moment');
 var commentList = require('./comment-list');
+var apiComment = require('./api-comment');
 
 //atributos data del article
 var articleId = $('#article-detail').data('article-id');
-//moment
+
 
 var nowDatecomment = moment().format();
-
 var timeago = require('timeago');
 
+// Contar nuemro de palabras:
+$("#textarea_comment").on('keyup', function() {
+
+    var words = this.value.match(/\S+/g).length;
+
+    if (words > 120) {
+        // Split the string on first 150 words and rejoin on spaces
+        var trimmed = $(this).val().split(/\s+/, 120).join(" ");
+        // Add a space at the end to keep new typing making new words
+        $(this).val(trimmed + " ");
+    } else {
+        $('#display_count').text(words);
+        $('#word_left').text(120-words);
+    }
+
+});
+
 $('.new-comment-form').on("submit", function (e) {
+
+    function beforeSend() {
+        $(inputs).attr("disabled", true);
+        $(".new-comment-form button").text("Saving comment").attr("disabled", true)
+    }
+
+    function completeSend() {
+        $(inputs).attr("disabled", false);
+        $(".new-comment-form button").text("Comment").attr("disabled", false)
+    }
     //Validar el formualario
     e.preventDefault();
     var inputs = $('.new-comment-form input');
@@ -23,7 +50,6 @@ $('.new-comment-form').on("submit", function (e) {
     for (var i = 0;  i < inputs.length; i++){
         var input = inputs[i];
         if(input.checkValidity()==false){
-            //alert(input.validationMessage);
             input.focus();
             return false;
         }
@@ -33,7 +59,7 @@ $('.new-comment-form').on("submit", function (e) {
         return false;
     }
 
-    //comentario nuevo
+    //Nuevo comentario
 
     var comment = {
         articleId: articleId,
@@ -43,30 +69,21 @@ $('.new-comment-form').on("submit", function (e) {
         comment: $('#textarea_comment').val(),
         publicationComment: nowDatecomment.valueOf()
     }
-    console.log(comment);
 
-    //petición AJAX para guardar información en json-server
-    $.ajax({
-        url :  "http://localhost:3004/comments",
-        method: "post",
-        data: comment,
-        beforeSend: function () {
-            $(inputs).attr("disabled", true);
-            $(".new-comment-form button").text("Saving comment").attr("disabled", true)
-        },
-        success: function () {
-            console.log("SUCCESS", arguments);
+    beforeSend(); //deshabilito el formulario
+
+    //petición  guardar comentario en json-server
+    apiComment.save(comment,
+        function (response) {
+            //console.log("SUCCESS", response);
             $('form')[0].reset();
             $('#name').focus();
             commentList.loadComments();
-        },
-        error: function () {
+            completeSend();
+    },
+        function () {
             console.log("ERROR", arguments);
-        },
-        complete: function () {
-        $(inputs).attr("disabled", false);
-        $(".new-comment-form button").text("Comment").attr("disabled", false)
-    }
+            completeSend();
     });
 
     return false;

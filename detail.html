@@ -46,7 +46,7 @@
                         <span class="collection-header"> @Mr.X </span>
                         <p>Intro User</p>
                         <i class="mdi-action-grade"><time class="timeago" datetime="2016-12-17T00:56:14+01:00">9th October, 2009</time></i>
-                        <i class="secondary-content">Fav</i>
+                        <i class="secondary-content"></i>
                     </li>
                 </ul>
             </div>
@@ -151,8 +151,9 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="textarea_comment" name="textarea-comment" class="materialize-textarea" length="120" required></textarea>
+                                    <textarea id="textarea_comment" name="textarea-comment" class="materialize-textarea" required></textarea>
                                     <label for="textarea_comment" class="active">Leave a comment</label>
+                                    Total <span id="display_count">0</span> palabras.  Quedan: <span id="word_left">120</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -179,7 +180,8 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © <a class="brown-text text-lighten-3" href="http://materializecss.com">Richard Cacuango</a>
+            © Richard Cacuango
+            <a class="to-top text-black white-text right">Top &uarr;</a>
         </div>
     </div>
 </footer>

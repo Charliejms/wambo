@@ -1,22 +1,21 @@
 $(document).ready(function(){
 
-	$('body').append('<p id="back-top"><span></span><a href="#top">Back to Top</a></p>');
-
+	var  scrollTop = $('.to-top');
 	// hide #back-top first
-	$("#back-top").hide();
-	
+	scrollTop.hide();
+
 	// fade in #back-top
 	$(function () {
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 100) {
-				$('#back-top').fadeIn();
+                scrollTop.fadeIn();
 			} else {
-				$('#back-top').fadeOut();
+                scrollTop.fadeOut();
 			}
 		});
 
 		// scroll body to 0px on click
-		$('#back-top span').click(function () {
+		scrollTop.click(function () {
 			$('body,html').animate({
 				scrollTop: 0
 			}, 800);

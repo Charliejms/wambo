@@ -15,12 +15,12 @@
             <a href="index.html" class="brand-logo">Wambo</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="templates/login.html">Login</a></li>
+                <li><a href="templates/register.html">Register</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="templates/login.html">Login</a></li>
+                <li><a href="templates/register.html">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -36,21 +36,21 @@
     </div>
 </header>
 
-<section class="post-list">
+<section class="">
     <article class="">
         <div class="container">
             <div class="row">
                 <div class="col s12 m12 l12">
                     <div class="blog-card">
-                        <div class="card">
+                        <div class="card" data-article-id="1009">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <a href="detail.html">
                                     <img src="dist/img/mrrobot-post_mini.png" alt="blog-img">
                                 </a>
                             </div>
                             <ul class="card-action-buttons">
-                                <li>
-                                    <a class="btn-floating waves-effect waves-light green accent-2">
+                                <li class="favorite">
+                                    <a class="btn-floating favorite waves-effect waves-light green accent-2">
                                         <i class="small material-icons">star</i>
                                     </a>
                                 </li>
@@ -65,20 +65,21 @@
                                     <span class="left">
                                         <a href="#">TV Show</a>
                                     </span>
-                                    <span class="right">18th June, 2015</span>
+                                    <span class="right"><time class="timeago" datetime="2016-10-17T12:32:14+01:00">18th June, 2016</time></span>
                                 </p>
-                                <h2 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">I miss Mr. Robot. It won’t be back on TV until June</a>
+                                <h2 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">
+                                    I miss Mr. Robot. It won’t be back on TV until June</a>
                                 </h2>
                                 <div class="row">
-                                    <div class="col s2">
-                                        <img src="dist/img/avatar/user.png" alt="" class="circle responsive-img valign profile-image">
+                                    <div class="col s8 left-align">
+                                        <div class="chip">
+                                            <a href="#">
+                                                <img src="dist/img/avatar/user.png" alt="Contact Person">
+                                                Richard Cacuango
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="col s9"> By <a href="#">@Mr X</a></div>
                                 </div>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> Apple MacBook Pro A1278 13"</span>
-                                <p>Here is some more information about this blog that is only revealed once clicked on.</p>
                             </div>
                         </div>
                     </div>
@@ -91,44 +92,8 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m12 l12">
-                    <div class="blog-card">
-                        <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <a href="detail.html">
-                                    <img src="dist/img/mrrobot-post_mini.png" alt="blog-img">
-                                </a>
-                            </div>
-                            <ul class="card-action-buttons">
-                                <li>
-                                    <a class="btn-floating waves-effect waves-light green accent-2">
-                                        <i class="small material-icons">star</i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="btn-floating waves-effect waves-light light-blue">
-                                        <i class="small material-icons">comment</i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="card-content">
-                                <p class="row">
-                                    <span class="left"><a href="#">TV Show</a></span>
-                                    <span class="right">18th June, 2015</span>
-                                </p>
-                                <h2 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">Materialize Featured Blog Post Card</a>
-                                </h2>
-                                <div class="row">
-                                    <div class="col s2">
-                                        <img src="dist/img/avatar/user.png" alt="" class="circle responsive-img valign profile-image">
-                                    </div>
-                                    <div class="col s9"> By <a href="#">John Doe</a></div>
-                                </div>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> Apple MacBook Pro A1278 13"</span>
-                                <p>Here is some more information about this blog that is only revealed once clicked on.</p>
-                            </div>
-                        </div>
+                    <div class="post-list blog-card">
+
                     </div>
                 </div>
             </div>
@@ -147,7 +112,8 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © <a class="brown-text text-lighten-3" href="http://materializecss.com">Richard Cacuango</a>
+            © Richard Cacuango
+            <a class="to-top text-black white-text right">Top &uarr;</a>
         </div>
     </div>
 </footer>
