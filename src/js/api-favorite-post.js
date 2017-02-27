@@ -1,34 +1,23 @@
 var $ = require('jquery');
 
-module.exports = {
-    favorite : function (articleId, userId, successCallback, errorCallback ) {
+function buildPostKey(articleId) {
+    return "id_"+ articleId;
+}
+function buildPostName() {
+    return "post_"+ articleId;
+}
 
-        if (typeof(Storage) !== "undefined") {
-            // Code for localStorage/sessionStorage.
-            sessionStorage.setItem("article", articleId);
-            console.log(sessionStorage.getItem('article'))
-            successCallback();
-        } else {
-            // No Web Storage support
-            errorCallback();
-        }
+module.exports = {
+    save : function (articleId, userId, successCallback, errorCallback ) {
+        //petición AJAX para guardar articulos favoritos  en json-server
     },
 
-    unfavorite : function (articleId, userId, successCallback, errorCallback) {
-
-        if (typeof(Storage) !== "undefined") {
-            // Code for localStorage/sessionStorage.
-            if(sessionStorage.getItem('article') == articleId){
-                sessionStorage.removeItem("article");
-                console.log(sessionStorage.getItem('article'))
-                successCallback();
-            }else {
-                errorCallback();
-            }
-        } else {
-            //No Web Storage support..
-                errorCallback();
-        }
+    delete : function (articleId, userId, successCallback, errorCallback) {
+        //petición AJAX para borrar articul favorit  en json-server
         
+    },
+    list : function (successCallback, errorCallback) {
+        //petición AJAX para listar  articulos favoritos  en json-server
     }
+
 }

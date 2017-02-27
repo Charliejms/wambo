@@ -17,16 +17,18 @@ var timeago = require('timeago');
 // Contar nuemro de palabras:
 $("#textarea_comment").on('keyup', function() {
 
-    var words = this.value.match(/\S+/g).length;
+    //var words = this.value.match(/\S+/g).length;
+    var limitWords = 120;
+    var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
 
-    if (words > 120) {
+    if (words > limitWords) {
         // Split the string on first 150 words and rejoin on spaces
-        var trimmed = $(this).val().split(/\s+/, 120).join(" ");
+        var trimmed = $(this).val().split(/\s+/, limitWords).join(" ");
         // Add a space at the end to keep new typing making new words
         $(this).val(trimmed + " ");
     } else {
         $('#display_count').text(words);
-        $('#word_left').text(120-words);
+        $('#word_left').text(limitWords-words);
     }
 
 });

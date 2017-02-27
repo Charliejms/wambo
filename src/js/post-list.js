@@ -28,12 +28,12 @@ module.exports = {
                         var avatar = post.author.avatar;
                         var id = post.id || "";
 
-                        var html ='<div class="card" data-article-id="'+id+'">' +
+                        var html ='<div class="card">' +
                             '<div class="card-image waves-effect waves-block waves-light">' +
                             '<a href="detail.html">';
                         html +='<img src="'+ media +'" alt="blog-img">';
                         html +='</a></div><ul class="card-action-buttons">' +
-                            '<li><a class="btn-floating waves-effect waves-light green favorite accent-2"> <i class="small material-icons">star</i> </a> ' +
+                            '<li><a class="btn-floating favorite waves-effect waves-light green accent-2" data-article-id="'+id+'"> <i class="small material-icons">star</i> </a> ' +
                             '</li><li><a class="btn-floating waves-effect waves-light light-blue"> <i class="small material-icons">comment</i> </a> ' +
                             '</li></ul>';
                         html +='<div class="card-content"><p class="row">';

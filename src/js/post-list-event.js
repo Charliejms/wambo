@@ -1,32 +1,44 @@
 var $ = require('jquery');
-var apiFavPost = require('./api-favorite-post');
+var favoriteService = require('./favorite-service');
+var storage = require('./storage');
 
-$('.card-action-buttons').on('click','a.favorite',function () {
+var articleId = $('.card').data('article-id');
+function buildPostName() {
+    return "post_"+ articleId;
+}
+
+function checkFavReloadPage() {
+    if(storage.checkExists(buildPostName())){
+
+        var article = $('a.favorite');
+        article.removeClass("favorite green").addClass("favorited blue");
+        console.log("checkfavorite "+ articleId);
+        storage.store(buildPostName(), articleId);
+    }
+}
+checkFavReloadPage();
+
+
+
+$('.blog-card').on('click','a.favorite',function () {
+    console.log("Hola que haces!")
     var self = this;
-    //atributos data del article
-    console.log(self);
-    var articleId = $('.card').data('article-id');
-
-    var isVisible = $('.favorite').is(":visible");
-
-    apiFavPost.favorite(articleId,1,function (response) {
+    var articleId = $(self).data('article-id');
+    if(!storage.checkExists(articleId)){
         $(self).removeClass("favorite green").addClass("favorited blue");
         console.log("favorite"+ articleId);
-    },function (response) {
-        console.error("Error favorite article", response);
-    });
+        storage.store(buildPostName(), articleId);
+    }
+
 });
 
-$('.card-action-buttons').on('click','a.favorited',function () {
+$('.blog-card').on('click','a.favorited', function () {
+    console.log('Desfav  Article')
     var self = this;
-    //atributos data del article
-    console.log(self);
-    var articleId = $('.card').data('article-id');
-    apiFavPost.unfavorite(articleId,1,function (response) {
+    if(storage.checkExists(buildPostName())){
+        storage.clearOne(buildPostName());
+        console.log("Remove favorite"+ articleId);
         $(self).removeClass("favorited blue").addClass("favorite green");
-        console.log("favorited"+ articleId);
-    },function (response) {
-        console.error("Error unfavorite article", response);
-    });
+    }
 
 });
