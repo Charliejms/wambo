@@ -1,0 +1,27 @@
+
+/* search Form ****/
+.side-nav > li > form {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px; }
+
+@media (min-width: 768px) {
+  .side-nav > li > form {
+    padding-top: 15px;
+    padding-bottom: 15px; } }
+
+#search-nav input, #search-nav button[type="reset"] {
+  display: none; }
+
+#search-nav input, #search-nav button {
+  border-radius: 0px;
+  border-width: 0px;
+  color: #454545;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none; }
+
+#search-nav .search-submit {
+  position: relative;
+  bottom: 2px; }

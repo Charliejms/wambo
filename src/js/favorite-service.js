@@ -24,6 +24,8 @@ module.exports = {
         }
     },
     isFavorite: function (articleId) {
-
+        if(storage.checkExists(this._buildPostName(articleId))){
+            storage.store(this._buildPostName(articleId),articleId);
+        }
     }
 }

@@ -10,6 +10,14 @@ function buildPostName() {
 module.exports = {
     save : function (articleId, userId, successCallback, errorCallback ) {
         //petición AJAX para guardar articulos favoritos  en json-server
+        $.ajax({
+            url :  "http://localhost:3004/favorite",
+            method: "post",
+            data: {favorite_id: elem.attr('favorite-data-id')},
+            success: successCallback,
+            error: errorCallback,
+        })
+
     },
 
     delete : function (articleId, userId, successCallback, errorCallback) {
@@ -18,6 +26,12 @@ module.exports = {
     },
     list : function (successCallback, errorCallback) {
         //petición AJAX para listar  articulos favoritos  en json-server
+        $.ajax({
+            url :  "http://localhost:3004/favorite",
+            method: "get",
+            success: successCallback,
+            error: errorCallback,
+        })
     }
 
 }
